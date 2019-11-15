@@ -1,0 +1,91 @@
+html,body {
+	height: 100%;
+}
+
+body.site {
+	background-color: #222222; 
+	font-size: 14px;
+}
+
+.site .brand {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 40px auto;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+	position: relative;
+	z-index: 1;
+}
+
+.site .brand img {
+	width: 100%;
+}
+
+.site .card-wrapper {
+	width: 400px;
+}
+
+.site .card {
+    background-color: #333333;
+	border-color: transparent;
+	box-shadow: 0 4px 8px rgba(0,0,0,.05);
+}
+
+.site .card.fat {
+	padding: 10px;
+}
+
+.site .card.error {
+	padding: 20px;
+}
+
+.site .card .card-title {
+	margin-bottom: 30px;
+}
+
+.site .card .app-title {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.site .card .app-text {
+    color: Gainsboro;
+    text-align: center;
+}
+
+.site .form-control {
+	border-width: 2.3px;
+}
+
+.site .form-group label {
+	width: 100%;
+}
+
+.site .btn.btn-block {
+	padding: 12px 10px;
+}
+
+.site .footer {
+	margin: 40px 0;
+	color: Gainsboro;
+	text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+	.site .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.site .card.fat {
+		padding: 0;
+	}
+
+	.site .card.fat .card-body {
+		padding: 15px;
+	}
+}

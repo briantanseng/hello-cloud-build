@@ -1,0 +1,17 @@
+# Docker files
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Git files
+.git
+.gitignore
+
+# Editors
+.idea
+*.iml
+.vscode
+
+# Miscellaneous files
+README.md
+LICENSE
