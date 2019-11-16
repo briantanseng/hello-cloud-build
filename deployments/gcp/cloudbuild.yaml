@@ -1,9 +1,13 @@
 steps:
-# Build the Docker image then push to Google Container Registry (gcr)
+# Build the Docker image 
  - name: 'gcr.io/cloud-builders/docker'
    args: ['build', '-t', 'gcr.io/$PROJECT_ID/hello-gdg', '.']
+
+# Push image to Google Container Registry (gcr)
  - name: 'gcr.io/cloud-builders/docker'
    args: [ 'push', 'gcr.io/$PROJECT_ID/hello-gdg']
+
+# Deploy to Cloud Run
  - name: 'gcr.io/cloud-builders/gcloud'
    args: ['beta', 'run', 'deploy', 'hello-gdg', '--image', 'gcr.io/$PROJECT_ID/hello-gdg', '--allow-unauthenticated','--platform', 'managed', '--region', 'us-central1']
 
